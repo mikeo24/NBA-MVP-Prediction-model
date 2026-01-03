@@ -4,11 +4,13 @@
 
 ## Overview
 
-This project builds an end-to-end machine learning pipeline to predict NBA Most Valuable Player (MVP) outcomes using historical player statistics. Rather than treating MVP voting as a single prediction task, the project mirrors the real-world voting process by decomposing it into two stages:
+This project builds an end-to-end machine learning pipeline to predict NBA Most Valuable Player (MVP) outcomes using historical **(1991-2025)** player statistics. Rather than treating MVP voting as a single prediction task, the project mirrors the real-world voting process by decomposing it into two stages:
 **1. Identifying MVP-caliber players** (classification)
 **2. Ranking those elite players by expected vote share** (regression)
 
 This approach addresses the extreme class imbalance and zero-inflation inherent in MVP data.
+
+---
 
 ### Problem Framing
 
@@ -24,14 +26,14 @@ Modeling MVP vote share directly for all players leads to unstable predictions d
 
 > **- Stage 2: Among those players, how strong is each candidate relative to others?**
 
+---
+
 # Modeling Approach
 ## Stage 1: MVP Classification (Binary)
 
-**Model:** XGBoost Classifier
-
-**Target:** `mvp_binary` (1 = received MVP votes, 0 = did not)
-
-**Objective:** Maximize recall **(TP)** to avoid missing true MVP candidates
+- **Model:** XGBoost Classifier  
+- **Target:** `MVP_binary` (1 = MVP winner, 0 = non-winner)  
+- **Objective:** Maximize recall to ensure real MVPs are not missed  
 
 This stage acts as a very **precise filter**, narrowing thousands of players down to a small, meaningful MVP candidate set.
 
@@ -43,28 +45,46 @@ This stage acts as a very **precise filter**, narrowing thousands of players dow
 
 This stage reflects how MVP voting works in practice: voters compare a small group of standout players rather than the entire league.
 
-## Data Pipeline
 
-**1. Web Scraping**
+---
 
-Historical NBA player statistics and MVP voting data
+##  Data Pipeline
 
-Data Cleaning & Feature Engineering
+### 1. Web Scraping  
+- Historical NBA player statistics  
+- MVP voting data from Basketball Reference  
 
-Advanced performance metrics
+### 2. Data Cleaning & Feature Engineering  
+- Advanced performance metrics (TS%, USG%, per-36 stats, efficiency metrics)  
+- Player-level and season-level normalization  
+- Construction of binary and continuous targets  
 
-Year-level and player-level normalization
+### 3. Train / Validation / Test Split  
+- Strict separation to prevent data leakage  
+- Test set used **only once** for final evaluation  
+- Supports future-season inference  
 
-Target construction for both binary and continuous tasks
-
-Train / Validation / Test Split
-
-Strict separation to prevent leakage
-
-Test set used only once for final evaluation
-
-Model Training & Hyperparameter Tuning
+### 4. Model Training & Hyperparameter Tuning  
+- Recall-optimized evaluation for MVP detection  
+- Controlled complexity for stability and generalization  
+- Randomized and grid-based search strategies  
 
 Cross-validated recall optimization for classification
 
-Controlled complexity for regression stability
+---
+
+## Key Insights
+
+- MVP voting is driven primarily by **offensive volume, usage, and star role**
+- Team success contributes, but individual dominance matters more
+- Modeling MVP as a single regression problem performs poorly due to extreme zero inflation
+- A two-stage approach significantly improves interpretability and performance.
+
+
+---
+
+## Future Applications
+
+- Rank MVP candidates for unseen seasons (e.g. 2026)
+- Generate MVP probability leaderboards by season
+- Extend framework to other awards (All-NBA, DPOY, MIP)
