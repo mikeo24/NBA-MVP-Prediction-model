@@ -25,9 +25,11 @@ Modeling MVP vote share directly for all players leads to unstable predictions d
 > **- Stage 2: Among those players, how strong is each candidate relative to others?**
 
 # Modeling Approach
-# Stage 1: MVP Classification (Binary)
+## Stage 1: MVP Classification (Binary)
 
 **Model:** XGBoost Classifier
+
 **Target:** `mvp_binary` (1 = received MVP votes, 0 = did not)
+
 **Objective:** Maximize recall **(TP)** to avoid missing true MVP candidates
 
