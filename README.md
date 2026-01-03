@@ -90,3 +90,25 @@ Cross-validated recall optimization for classification
 - Rank MVP candidates for unseen seasons (e.g. 2026)
 - Generate MVP probability leaderboards by season
 - Extend framework to other awards (All-NBA, DPOY, MIP)
+
+
+Repository Structure
+--------------------
+
+
+
+├── MVPS_Webscraping_and_Predictions.ipynb
+│   └── Web scraping, data collection, and pipeline setup
+│
+├── data_cleaning_mvp.ipynb
+│   └── Data cleaning, feature engineering, and metric construction
+│
+├── Predict_MVP.ipynb
+│   └── Final modeling, evaluation, and MVP predictions
+│
+├── *.html
+│   └── Exported notebook versions for easy viewing (no execution required)
+│
+└── README.md
+    └── Project overview, methodology, and results
+
