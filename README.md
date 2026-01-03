@@ -18,15 +18,15 @@ This approach addresses the extreme class imbalance and zero-inflation inherent 
 
 MVP voting presents two major modeling challenges:
 
-> **- Rarity**: Only one MVP exists per season, making positive labels extremely scarce.
+- **Rarity**: Only one MVP exists per season, making positive labels extremely scarce.
 
-> **- Zero-inflation**: The vast majority of players receive zero MVP vote share.
+- **Zero-inflation**: The vast majority of players receive zero MVP vote share.
 
 Modeling MVP vote share directly for all players leads to unstable predictions dominated by zeros. To solve this, the problem is framed as a two-stage decision process:
 
-> **- Stage 1: Who belongs in the MVP conversation?**
+- **Stage 1: Who belongs in the MVP conversation?**
 
-> **- Stage 2: Among those players, how strong is each candidate relative to others?**
+- **Stage 2: Among those players, how strong is each candidate relative to others?**
 
 ---
 
