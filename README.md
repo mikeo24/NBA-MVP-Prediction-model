@@ -18,3 +18,16 @@ MVP voting presents two major modeling challenges:
 
 > **- Zero-inflation**: The vast majority of players receive zero MVP vote share.
 
+Modeling MVP vote share directly for all players leads to unstable predictions dominated by zeros. To solve this, the problem is framed as a two-stage decision process:
+
+> **- Stage 1: Who belongs in the MVP conversation?**
+
+> **- Stage 2: Among those players, how strong is each candidate relative to others?**
+
+# Modeling Approach
+# Stage 1: MVP Classification (Binary)
+
+**Model:** XGBoost Classifier
+**Target:** `mvp_binary` (1 = received MVP votes, 0 = did not)
+**Objective:** Maximize recall **(TP)** to avoid missing true MVP candidates
+
