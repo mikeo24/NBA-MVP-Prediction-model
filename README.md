@@ -1,2 +1,12 @@
-# NBA-MVP-Prediction-model
-This project develops an end-to-end machine learning pipeline to predict NBA Most Valuable Player (MVP) outcomes using historical player performance data. This approach addresses extreme class imbalance and zero-inflated voting data while closely reflecting real-world MVP voting behavior.
+# NBA MVP Prediction Pipeline
+
+### A Two-Stage Machine Learning Approach to Identifying and Ranking MVP Candidates
+
+## Overview
+
+This project builds an end-to-end machine learning pipeline to predict NBA Most Valuable Player (MVP) outcomes using historical player statistics. Rather than treating MVP voting as a single prediction task, the project mirrors the real-world voting process by decomposing it into two stages:
+**1. Identifying MVP-caliber players** (classification)
+**2. Ranking those elite players by expected vote share** (regression)
+
+This approach addresses the extreme class imbalance and zero-inflation inherent in MVP data.
+
