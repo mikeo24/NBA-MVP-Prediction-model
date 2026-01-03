@@ -5,7 +5,9 @@
 ## Overview
 
 This project builds an end-to-end machine learning pipeline to predict NBA Most Valuable Player (MVP) outcomes using historical **(1991-2025)** player statistics. Rather than treating MVP voting as a single prediction task, the project mirrors the real-world voting process by decomposing it into two stages:
+
 **1. Identifying MVP-caliber players** (classification)
+
 **2. Ranking those elite players by expected vote share** (regression)
 
 This approach addresses the extreme class imbalance and zero-inflation inherent in MVP data.
