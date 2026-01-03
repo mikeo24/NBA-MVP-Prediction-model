@@ -113,4 +113,5 @@ Cross-validated recall optimization for classification
   Project overview, methodology, modeling decisions, and key results.
 
 
+This project uses NBA player and MVP vote data sourced from [Basketball Reference](https://www.basketball-reference.com/), a comprehensive database of historical basketball statistics.
 
