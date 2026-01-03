@@ -96,7 +96,6 @@ Repository Structure
 --------------------
 
 
-
 ├── MVPS_Webscraping_and_Predictions.ipynb
 │   └── Web scraping, data collection, and pipeline setup
 │
@@ -111,4 +110,5 @@ Repository Structure
 │
 └── README.md
     └── Project overview, methodology, and results
+
 
