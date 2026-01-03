@@ -92,23 +92,25 @@ Cross-validated recall optimization for classification
 - Extend framework to other awards (All-NBA, DPOY, MIP)
 
 
-Repository Structure
---------------------
+## Repository Structure
 
+### Notebooks
+- **MVPS_Webscraping_and_Predictions.ipynb**  
+  Web scraping, historical data collection, and end-to-end pipeline setup.
 
-├── MVPS_Webscraping_and_Predictions.ipynb
-│   └── Web scraping, data collection, and pipeline setup
-│
-├── data_cleaning_mvp.ipynb
-│   └── Data cleaning, feature engineering, and metric construction
-│
-├── Predict_MVP.ipynb
-│   └── Final modeling, evaluation, and MVP predictions
-│
-├── *.html
-│   └── Exported notebook versions for easy viewing (no execution required)
-│
-└── README.md
-    └── Project overview, methodology, and results
+- **data_cleaning_mvp.ipynb**  
+  Data cleaning, feature engineering, and construction of MVP-relevant metrics.
+
+- **Predict_MVP.ipynb**  
+  Final modeling, evaluation, and MVP predictions using classification and regression models.
+
+### Exports
+- **HTML files (.html)**  
+  Exported notebook versions for easy viewing without running code.
+
+### Documentation
+- **README.md**  
+  Project overview, methodology, modeling decisions, and key results.
+
 
 
