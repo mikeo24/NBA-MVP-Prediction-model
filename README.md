@@ -10,3 +10,11 @@ This project builds an end-to-end machine learning pipeline to predict NBA Most 
 
 This approach addresses the extreme class imbalance and zero-inflation inherent in MVP data.
 
+### Problem Framing
+
+MVP voting presents two major modeling challenges:
+
+**- Rarity**: Only one MVP exists per season, making positive labels extremely scarce.
+
+**- Zero-inflation**: The vast majority of players receive zero MVP vote share.
+
