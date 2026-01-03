@@ -33,3 +33,7 @@ Modeling MVP vote share directly for all players leads to unstable predictions d
 
 **Objective:** Maximize recall **(TP)** to avoid missing true MVP candidates
 
+This stage acts as a very **precise filter**, narrowing thousands of players down to a small, meaningful MVP candidate set.
+
+
+
