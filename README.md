@@ -14,7 +14,7 @@ This approach addresses the extreme class imbalance and zero-inflation inherent 
 
 MVP voting presents two major modeling challenges:
 
-**- Rarity**: Only one MVP exists per season, making positive labels extremely scarce.
+**> - Rarity**: Only one MVP exists per season, making positive labels extremely scarce.
 
-**- Zero-inflation**: The vast majority of players receive zero MVP vote share.
+**> - Zero-inflation**: The vast majority of players receive zero MVP vote share.
 
