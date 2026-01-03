@@ -35,5 +35,36 @@ Modeling MVP vote share directly for all players leads to unstable predictions d
 
 This stage acts as a very **precise filter**, narrowing thousands of players down to a small, meaningful MVP candidate set.
 
+## Stage 2: MVP Vote Share Prediction (Continuous)
 
+- **Model:** Gradient Boosting Regressor  
+- **Target:** `Share` (percentage of MVP votes)  
+- **Objective:** Rank MVP-caliber players by expected vote share  
 
+This stage reflects how MVP voting works in practice: voters compare a small group of standout players rather than the entire league.
+
+## Data Pipeline
+
+**1. Web Scraping**
+
+Historical NBA player statistics and MVP voting data
+
+Data Cleaning & Feature Engineering
+
+Advanced performance metrics
+
+Year-level and player-level normalization
+
+Target construction for both binary and continuous tasks
+
+Train / Validation / Test Split
+
+Strict separation to prevent leakage
+
+Test set used only once for final evaluation
+
+Model Training & Hyperparameter Tuning
+
+Cross-validated recall optimization for classification
+
+Controlled complexity for regression stability
